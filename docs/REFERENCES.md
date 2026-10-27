@@ -1,0 +1,5 @@
+# References
+
+- Xing Zhang, Guanghui Wang, Yanwei Cui, Mengdie Flora Wang and Peiyang He. [UnitBoost: Managing Compound LLM Systems with a Merge Operator, Not a Model](https://arxiv.org/abs/2609.09815), 2026. arXiv:2609.09815, v2 dated 2026-10-06. UnitMerge is a scoped software exploration; it does not reproduce the full scored operator or paper experiments.
+- Pranav Rajpurkar, Robin Jia and Percy Liang. [Know What You Don't Know: Unanswerable Questions for SQuAD](https://aclanthology.org/P18-2124/), 2018. [Official SQuAD project and dataset](https://rajpurkar.github.io/SQuAD-explorer/). Dataset terms: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The selected, rescored derivative is described in [NOTICE](../NOTICE) and the frozen protocol.
+- [Python packaging project metadata](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/) and [uv documentation](https://docs.astral.sh/uv/) describe the build and install tools. The runtime has no third-party dependencies.

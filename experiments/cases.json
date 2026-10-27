@@ -1,0 +1,13 @@
+{
+  "scope": "Authored software examples, not independent scientific evidence or a tuned benchmark.",
+  "fixed_worker": "w1",
+  "cases": [
+    {"id":"complement","text":"minimum 10 maximum 80","units":["min","max"],"truth":{"min":10,"max":80},"proposals":[["min",10,"w1","10",true],["max",80,"w2","80",true]],"constraints":[{"left":"min","op":"<=","right":"max"}]},
+    {"id":"duplicated-origin","text":"maximum 80","units":["max","missing"],"truth":{"max":80,"missing":20},"proposals":[["max",80,"w1","80",true],["max",80,"w2","80",true],["max",80,"w3","80",true]]},
+    {"id":"conflicting-extraction","text":"maximum 80","units":["max"],"truth":{"max":80},"proposals":[["max",80,"w1","80",true],["max",81,"w2","80",true]]},
+    {"id":"stale-source","text":"maximum 80","units":["max"],"truth":{"max":90},"current":false,"proposals":[["max",80,"w1","80",true]]},
+    {"id":"bad-quote","text":"maximum 80","units":["max"],"truth":{"max":80},"proposals":[["max",80,"w1","80",true],["max",81,"w2","80",false]]},
+    {"id":"matching-quote-wrong-value","text":"maximum 80","units":["max"],"truth":{"max":80},"proposals":[["max",900,"w1","80",true]]},
+    {"id":"inconsistent-row","text":"minimum 100 maximum 80","units":["min","max"],"truth":{"min":100,"max":80},"proposals":[["min",100,"w1","100",true],["max",80,"w2","80",true]],"constraints":[{"left":"min","op":"<=","right":"max"}]}
+  ]
+}

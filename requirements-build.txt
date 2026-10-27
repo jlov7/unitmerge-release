@@ -1,0 +1,4 @@
+# Build tooling only. The package has no runtime dependencies.
+setuptools==84.2.0
+wheel==0.48.0
+packaging==26.3

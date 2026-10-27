@@ -1,0 +1,2 @@
+# Reproducible local and CI lint gate. The package has no runtime dependency on Ruff.
+ruff==0.17.1

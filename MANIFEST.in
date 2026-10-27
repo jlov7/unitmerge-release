@@ -1,0 +1,13 @@
+include CITATION.cff
+include LICENSE NOTICE README.md pyproject.toml requirements-build.txt
+include CONTRIBUTING.md SECURITY.md CHANGELOG.md requirements-dev.txt
+include examples/*.json
+include experiments/*.json experiments/*.py
+include docs/USAGE.md docs/DESIGN.md docs/EVALUATION.md docs/LIMITATIONS.md docs/REFERENCES.md
+include docs/VALIDATION.md
+recursive-include tests *.py
+include scripts/verify_release.py scripts/verify_docs.py
+include docs/STABILITY.md docs/RELEASING.md
+include docs/assets/*.svg
+prune .release-scratch
+exclude AGENTS.md STATUS.md LICENSE-STATUS.md

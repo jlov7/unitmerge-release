@@ -1,0 +1,18 @@
+UnitMerge original code is MIT licensed. See LICENSE.
+
+SQuAD 2.0 is by Pranav Rajpurkar, Robin Jia and Percy Liang and the
+Stanford NLP Group: https://rajpurkar.github.io/SQuAD-explorer/
+The official dataset is CC BY-SA 4.0:
+https://creativecommons.org/licenses/by-sa/4.0/
+
+The full dataset, passages, questions and answer text are not redistributed.
+experiments/squad-pilot-v1.results.json contains a selected and rescored
+32-question derivative (96 arm-case records): identifiers, digests, statuses
+and metrics. This result file and its dataset-derived contents are offered
+under CC BY-SA 4.0, with the attribution and change notice above, to the
+extent dataset rights apply. They are not relicensed as MIT. The protocol and
+runner describe selection, scoring and the exact original dataset digest.
+
+The UnitBoost paper is credited in docs/REFERENCES.md. No paper text or code
+from that project is included. UnitMerge does not implement its complete
+scored merge algorithm and makes no comparative superiority claim.

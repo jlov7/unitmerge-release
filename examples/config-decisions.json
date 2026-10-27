@@ -1,0 +1,9 @@
+{
+  "report_sha256": "c0d810cb1ca83cdfc4d363c199a876a35ae0f7de54511aa2a660c6026d19a1f9",
+  "decisions": [
+    {
+      "path": "/logging/level",
+      "take": "right"
+    }
+  ]
+}

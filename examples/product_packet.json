@@ -1,0 +1,17 @@
+{
+  "units": ["part-17.width_mm", "part-17.height_mm", "part-17.max_temp_c", "part-17.min_temp_c", "part-17.compatible"],
+  "sources": {
+    "spec-A-v3": {"current": true, "digest": "synthetic-example-not-authenticated"},
+    "service-B-v2": {"current": true, "digest": "synthetic-example-not-authenticated"},
+    "spec-A-v2": {"current": false, "digest": "synthetic-old"}
+  },
+  "proposals": [
+    {"unit_id":"part-17.width_mm", "value":200, "source_ref":"spec-A-v3", "worker_id":"dimension"},
+    {"unit_id":"part-17.height_mm", "value":170, "source_ref":"spec-A-v3", "worker_id":"dimension"},
+    {"unit_id":"part-17.max_temp_c", "value":80, "source_ref":"service-B-v2", "worker_id":"service"},
+    {"unit_id":"part-17.min_temp_c", "value":-10, "source_ref":"service-B-v2", "worker_id":"service"},
+    {"unit_id":"part-17.compatible", "value":true, "source_ref":"spec-A-v3", "worker_id":"compatibility"},
+    {"unit_id":"part-17.width_mm", "value":190, "source_ref":"spec-A-v2", "worker_id":"stale-worker"}
+  ],
+  "constraints": [{"left":"part-17.min_temp_c", "op":"<=", "right":"part-17.max_temp_c"}]
+}

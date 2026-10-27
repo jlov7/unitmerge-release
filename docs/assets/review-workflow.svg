@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="580" viewBox="0 0 680 580" role="img" aria-labelledby="title desc">
+  <title id="title">UnitMerge review and resolution workflow</title>
+  <desc id="desc">Base, left and right JSON files create a report. A person reviews alternatives and saves explicit choices. Resolution rechecks unchanged inputs, options and choices before writing merged JSON and a receipt. Output verification compares bytes and content without authenticating the bundle.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4c596b"/></marker>
+  </defs>
+  <rect width="680" height="580" rx="18" fill="#f6f8fb"/>
+  <g font-family="system-ui, sans-serif" text-anchor="middle" fill="#172332">
+    <text x="340" y="38" font-size="25" font-weight="650">Review first. Resolve from the same bytes.</text>
+    <g fill="#ffffff" stroke="#96a5b9" stroke-width="1.5">
+      <rect x="34" y="64" width="186" height="72" rx="10"/>
+      <rect x="247" y="64" width="186" height="72" rx="10"/>
+      <rect x="460" y="64" width="186" height="72" rx="10"/>
+    </g>
+    <text x="127" y="95" font-size="21" font-weight="650">BASE</text>
+    <text x="127" y="121" font-size="17">common ancestor</text>
+    <text x="340" y="95" font-size="21" font-weight="650">LEFT</text>
+    <text x="340" y="121" font-size="17">first set of edits</text>
+    <text x="553" y="95" font-size="21" font-weight="650">RIGHT</text>
+    <text x="553" y="121" font-size="17">second set of edits</text>
+    <path d="M127 136 V157 H553 V136 M340 136 V184" fill="none" stroke="#4c596b" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="411" y="177" font-size="17">reconcile</text>
+    <rect x="122" y="188" width="436" height="77" rx="11" fill="#e5eefb" stroke="#6c8ebd" stroke-width="1.5"/>
+    <text x="340" y="218" font-size="22" font-weight="650">Review report</text>
+    <text x="340" y="246" font-size="18">automatic edits + explicit conflict alternatives</text>
+    <path d="M340 265 V297" fill="none" stroke="#4c596b" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="122" y="302" width="436" height="67" rx="11" fill="#ffffff" stroke="#96a5b9" stroke-width="1.5"/>
+    <text x="340" y="330" font-size="22" font-weight="650">Saved human choices</text>
+    <text x="340" y="355" font-size="18">base / left / right, bound to this report</text>
+    <path d="M340 369 V401" fill="none" stroke="#4c596b" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M127 157 H16 V434 H117" fill="none" stroke="#6c8ebd" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+    <rect x="122" y="405" width="436" height="67" rx="11" fill="#e5eefb" stroke="#6c8ebd" stroke-width="1.5"/>
+    <text x="340" y="433" font-size="22" font-weight="650">Resolve and recheck</text>
+    <text x="340" y="458" font-size="18">same inputs + options + complete choices</text>
+    <path d="M340 472 V502" fill="none" stroke="#4c596b" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="122" y="507" width="436" height="46" rx="10" fill="#e5f3ed" stroke="#6a9e86" stroke-width="1.5"/>
+    <text x="340" y="537" font-size="22" font-weight="650">Merged JSON + decision receipt</text>
+    <text x="340" y="574" font-size="16">verify-output compares bytes/content. Hashes are not authentication.</text>
+  </g>
+</svg>

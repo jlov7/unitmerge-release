@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unitmerge"
+version = "1.1.0"
+description = "Reconcile JSON configurations with explicit conflict review and byte-bound receipts."
+requires-python = ">=3.11"
+dependencies = []
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["provenance", "reproducibility", "structured-data"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+schema = ["jsonschema==4.26.0"]
+
+[project.scripts]
+unitmerge = "unitmerge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.data-files]
+"share/unitmerge/examples" = ["examples/*.json"]
+
+[tool.ruff]
+required-version = "==0.17.1"
+target-version = "py311"
+line-length = 100

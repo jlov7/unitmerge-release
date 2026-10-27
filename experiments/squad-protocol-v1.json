@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "purpose": "Small independent-label extraction pilot, not a semantic validator or superiority study.",
+  "dataset": "SQuAD 2.0 development split",
+  "source_url": "https://rajpurkar.github.io/SQuAD-explorer/dataset/dev-v2.0.json",
+  "dataset_sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_page": "https://rajpurkar.github.io/SQuAD-explorer/",
+  "selection": {
+    "count": 32,
+    "question_prefixes": ["how many", "what year", "in what year", "when "],
+    "order": "Original article, paragraph, question order. Select using question text only, before looking at labels or outcomes.",
+    "no_result_dependent_replacement": true
+  },
+  "extractors": {
+    "w1": "First numeric token in context: (?<!\\w)\\d+(?:,\\d{3})*(?:\\.\\d+)?(?!\\w)",
+    "w2": "First numeric token in the sentence with greatest unique lowercase alphabetic question-token overlap; tokens have at least three letters, fixed stop words, stable first-sentence tie break. No labels or other answers are provided.",
+    "stop_words": ["the", "and", "was", "were", "how", "many", "what", "when", "year", "did", "does", "for", "that", "this", "which", "with", "from", "are", "has", "have"]
+  },
+  "arms": ["checked_collation", "normalized_union", "fixed_worker_w1"],
+  "access": "Every arm receives identical eligible proposals from the two frozen source-only extractors. Gold labels are evaluator-only. Both workers read the same source, so their agreement is not independent evidence.",
+  "metrics": ["normalized_exact_match", "token_f1", "answerable_proposed", "unanswerable_false_answer", "unresolved_status_counts"],
+  "scoring": "Best normalized answer agreement across the supplied answers. Empty predictions score against empty gold for unanswerable questions. Conflict and unsupported statuses remain separately reported; they are not collapsed into an intentional abstention claim.",
+  "falsifier": "No candidate advantage over normalized union is expected: their eligible-cell value selection is extensionally the same. Any apparent advantage requires a scorer/input-parity investigation.",
+  "ceilings": ["rule-based extraction replay", "32 selected development questions, not a representative or confirmatory holdout", "answer agreement is not factual truth or general entailment", "no model inference or new human evaluation", "data stays outside the repository pending owner rights/publication review"]
+}

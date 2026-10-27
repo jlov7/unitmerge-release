@@ -1,0 +1,7 @@
+{
+  "service": {"host": "127.0.0.1", "port": 8080, "timeouts": {"connect": 5, "read": 30}},
+  "logging": {"level": "warning", "json": true},
+  "features": ["search"],
+  "obsolete": true,
+  "nullable": null
+}

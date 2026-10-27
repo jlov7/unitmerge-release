@@ -1,0 +1,6 @@
+{
+  "service": {"host": "127.0.0.1", "port": 8000, "timeouts": {"connect": 10, "read": 30}},
+  "logging": {"level": "debug", "json": false},
+  "features": ["search", "metrics"],
+  "nullable": "old"
+}
